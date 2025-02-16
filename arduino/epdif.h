@@ -3,12 +3,30 @@
 
 #include <Arduino.h>
 
-// Pin definition
-#define RST_PIN         8
-#define DC_PIN          9
-#define CS_PIN          10
-#define BUSY_PIN        7
-#define PWR_PIN         6
+// Load port assignments from pin_config.h
+#include "pin_config.h"
+
+
+// Ensure that the necessary pins are defined
+#ifndef RST_PIN
+#error "RST_PIN is not defined"
+#endif
+
+#ifndef DC_PIN
+#error "DC_PIN is not defined"
+#endif
+
+#ifndef CS_PIN
+#error "CS_PIN is not defined"
+#endif
+
+#ifndef BUSY_PIN
+#error "BUSY_PIN is not defined"
+#endif
+
+#ifndef PWR_PIN
+#error "PWR_PIN is not defined"
+#endif
 
 class EpdIf {
 public:
