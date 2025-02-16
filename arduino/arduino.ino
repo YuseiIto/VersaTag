@@ -1,6 +1,8 @@
 #include <Wire.h>
 #include <SPI.h>
 #include <Adafruit_BMP280.h>
+#include "epd2in13d.h"
+#include "imagedata.h"
 
 Adafruit_BMP280 bmp; // Interface: I2C
 Adafruit_Sensor *bmp_temp = bmp.getTemperatureSensor();
