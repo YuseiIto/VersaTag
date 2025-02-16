@@ -8,24 +8,24 @@
 
 
 // Ensure that the necessary pins are defined
-#ifndef RST_PIN
-#error "RST_PIN is not defined"
+#ifndef EPD_RST_PIN
+#error "EPD_RST_PIN is not defined"
 #endif
 
-#ifndef DC_PIN
-#error "DC_PIN is not defined"
+#ifndef EPD_DC_PIN
+#error "EPD_DC_PIN is not defined"
 #endif
 
-#ifndef CS_PIN
-#error "CS_PIN is not defined"
+#ifndef EPD_CS_PIN
+#error "EPD_CS_PIN is not defined"
 #endif
 
-#ifndef BUSY_PIN
-#error "BUSY_PIN is not defined"
+#ifndef EPD_BUSY_PIN
+#error "EPD_BUSY_PIN is not defined"
 #endif
 
-#ifndef PWR_PIN
-#error "PWR_PIN is not defined"
+#ifndef EPD_PWR_PIN
+#error "EPD_PWR_PIN is not defined"
 #endif
 
 class EpdIf {

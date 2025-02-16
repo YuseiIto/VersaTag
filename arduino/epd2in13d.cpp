@@ -107,10 +107,10 @@ Epd::~Epd()
 
 Epd::Epd()
 {
-    reset_pin = RST_PIN;
-    dc_pin = DC_PIN;
-    cs_pin = CS_PIN;
-    busy_pin = BUSY_PIN;
+    reset_pin = EPD_RST_PIN;
+    dc_pin = EPD_DC_PIN;
+    cs_pin = EPD_CS_PIN;
+    busy_pin = EPD_BUSY_PIN;
     width = EPD_WIDTH;
     height = EPD_HEIGHT;
 };
