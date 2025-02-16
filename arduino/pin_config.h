@@ -10,4 +10,6 @@
 #define BUSY_PIN        7
 #define PWR_PIN         6
 
+#define BMP280_CS_PIN 21
+
 #endif
