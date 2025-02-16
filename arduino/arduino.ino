@@ -39,15 +39,6 @@ void ensure_bmp_configured(void){
 
     while (1) delay(10);
 	}
-}
-
-void setup() {
-  Serial.begin(115200);
-
-	print_aa_logo();
-	Serial.println(F("Starting..."));
-
-	ensure_bmp_configured();
 
   /* Default settings from datasheet. */
   bmp.setSampling(Adafruit_BMP280::MODE_NORMAL,     /* Operating Mode. */
@@ -58,6 +49,17 @@ void setup() {
 
 	Serial.println(F("BMP280 Sensor Configured!"));
   bmp_temp->printSensorDetails();
+}
+
+void setup() {
+  Serial.begin(115200);
+
+	print_aa_logo();
+	Serial.println(F("Starting..."));
+
+	ensure_bmp_configured();
+
+
 }
 
 void loop() {
