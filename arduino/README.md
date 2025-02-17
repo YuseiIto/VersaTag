@@ -6,6 +6,7 @@ Arduino Sketch.
 ## Requirements
 - arduino-cli
 - GNU Make
+- [gum](https://github.com/charmbracelet/gum) (for interactive port selection)
 
 ## Compile
 
@@ -15,8 +16,8 @@ make compile
 
 ## Upload
 
-> [!IMPORTANT]
-> Set `ARDUINO_PORT` variable in `Makefile` to your Arduino port in advance.
+> [!TIP]
+> Before running `make upload`, connect to the board and run `make set-port` to specify which port to use.
 
 ```bash
 make upload
