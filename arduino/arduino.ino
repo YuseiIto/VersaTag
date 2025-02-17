@@ -8,6 +8,7 @@
 Adafruit_BMP280 bmp(BMP280_CS_PIN,&SPI);
 Adafruit_Sensor *bmp_temp = bmp.getTemperatureSensor();
 Adafruit_Sensor *bmp_pressure = bmp.getPressureSensor();
+Epd epd;
 
 void print_aa_logo(void){
 	Serial.println();
@@ -54,6 +55,7 @@ void ensure_bmp_configured(void){
 
 void setup() {
   Serial.begin(115200);
+	SPI.begin(18,36,26,-1);//SCK, MISO, MOSI, SS
 
 	print_aa_logo();
 	Serial.println(F("Starting..."));
@@ -61,9 +63,21 @@ void setup() {
 	ensure_bmp_configured();
 
 
+	Serial.println(F("Initializing EPD..."));
+	if(epd.Init()!=0){
+		Serial.println(F("EPD Init failed"));
+		while(1);
+	}
+
+	epd.Clear();
+	Serial.print("Displayimage\n");
+	epd.Display(gImage_IMAGE);
+	delay(2000);
+	epd.Sleep();
 }
 
 void loop() {
+
   sensors_event_t temp_event, pressure_event;
   bmp_temp->getEvent(&temp_event);
   bmp_pressure->getEvent(&pressure_event);
@@ -78,4 +92,5 @@ void loop() {
 
   Serial.println();
   delay(2000);
+
 }
