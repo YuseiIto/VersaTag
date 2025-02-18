@@ -1,4 +1,4 @@
-FQBN:=m5stack:esp32:m5stack_stamp_pico:PartitionScheme=default,CPUFreq=240,FlashMode=qio,FlashFreq=80,FlashSize=4M,UploadSpeed=1500000,LoopCore=1,EventsCore=1,DebugLevel=none,EraseFlash=none
+FQBN:=m5stack:esp32:m5stack_stamp_pico:PartitionScheme=default,CPUFreq=80,FlashMode=qio,FlashFreq=40,FlashSize=4M,UploadSpeed=1500000,LoopCore=1,EventsCore=1,DebugLevel=none,EraseFlash=none
 ARDUINO_CLI:=arduino-cli
 ARDUINO_PORT_FILE:= .arduino_port
 BAUDRATE := 115200
